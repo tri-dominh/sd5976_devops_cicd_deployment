@@ -6,9 +6,9 @@ metadata:
   namespace: argocd
 type: Opaque
 stringData:
-  AWS_ACCESS_KEY_ID: "" # AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY: "" # AWS_SECRET_ACCESS_KEY
-  AWS_DEFAULT_REGION: "ap-southeast-1"
+  AWS_ACCESS_KEY_ID: '' # AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY: '' # AWS_SECRET_ACCESS_KEY
+  AWS_DEFAULT_REGION: 'ap-southeast-1'
 ---
 # Git credentials for ArgoCD Image Updater to commit changes
 apiVersion: v1
@@ -21,9 +21,9 @@ metadata:
 type: Opaque
 stringData:
   type: git
-  url: https://github.com/tri-dominh/sd5976_msa.git
-  username: "" # GITHUB_USERNAME
-  password: "" # GITHUB_TOKEN
+  url: https://github.com/tri-dominh/sd5976_devops_cicd_deployment.git
+  username: '' # GITHUB_USERNAME
+  password: '' # GITHUB_TOKEN
 ---
 # ConfigMap for Git commit configuration
 apiVersion: v1
@@ -32,6 +32,6 @@ metadata:
   name: argocd-image-updater-config
   namespace: argocd
 data:
-  git.user: "ArgoCD Image Updater"
-  git.email: "argocd-image-updater@noreply.com"
-  log.level: "info"
+  git.user: 'ArgoCD Image Updater'
+  git.email: 'argocd-image-updater@noreply.com'
+  log.level: 'info'

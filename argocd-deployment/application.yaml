@@ -16,16 +16,16 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-  
+
   source:
-    repoURL: https://github.com/tri-dominh/sd5976_msa.git
+    repoURL: https://github.com/tri-dominh/sd5976_devops_cicd_deployment.git
     targetRevision: main
-    path: deployment
-  
+    path: argocd-deployment
+
   destination:
     server: https://kubernetes.default.svc
     namespace: sd5976-msa
-  
+
   syncPolicy:
     automated:
       prune: true
